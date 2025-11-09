@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/fonts/ofont.ru_Montserrat.ttf");
+}
+.container {
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto;
+  font-family: "montserrat";
+}
+.container-box {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background: url("../assets/background.png") center/cover no-repeat;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loyer1 {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+.loyer2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+.links {
+  width: 24%;
+  height: 80%;
+  background: red;
+  box-shadow: unset;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.tablo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.social {
+  width: 6%;
+  margin-top: 45px;
+  height: 33%;
+  background: orange;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.logo-games {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo-games > img {
+  width: 80%;
+}
+
+.container-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+.logo-ps5 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.logo-ps5 > img {
+  width: 45%;
+}
+
+.link {
+  width: 100%;
+  padding: 14px 0;
+  display: flex;
+  background: rgb(234, 80, 80);
+  justify-content: center;
+
+  &:hover {
+    color: red;
+    background: white;
+  }
+}
+.link.active {
+  color: red;
+  background: white;
+}
+.imgs {
+  width: 22%;
+  position: relative;
+}
+.pos {
+  width: 100%;
+  height: 140%;
+  position: absolute;
+  top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ifol {
+  display: flex;
+  color: white;
+  width: 70%;
+  justify-content: space-between;
+  height: 100%;
+}
+.for-text {
+  width: 69%;
+  height: 100%;
+  font-size: 21px;
+  font-weight: 700;
+}
+.for-button {
+  width: 24%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.glani {
+  width: 95%;
+  height: 100%;
+  background: black;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider1 {
+  width: 100%;
+  height: 300%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.9s ease-in-out;
+}
+.slide1 {
+  width: 100%;
+  height: 100%;
+}
+.slide1 > video {
+  width: 100%;
+  height: 100%;
+}
+.forbg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: url("../assets/Main\ Creative\ Area.png") top/cover no-repeat;
+}
+.p1 {
+  position: absolute;
+  top: 10px;
+  left: -120px;
+}
+.p2 {
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+}
+.sliders {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+.kon {
+  width: 34%;
+  position: relative;
+  height: 100%;
+}
+.schrt {
+  position: relative;
+  width: 100%;
+  height: 93%;
+  background: url("../assets/stic.png") top/cover no-repeat;
+
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.coin {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.maps-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.title {
+  width: 30%;
+  height: 100%;
+  background: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.bi {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.ro {
+  position: relative;
+}
+.ro > input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+.list{
+  margin-top: 10px;
+  height: 565px;
+  overflow-y: scroll;
+  scrollbar-width: 100px;
+scrollbar-width: none;
+}
+.list-elem {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  height: 90px;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+.list-elem > p {
+  color: rgb(16, 90, 152);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hidden {
+  display: none;
+}
