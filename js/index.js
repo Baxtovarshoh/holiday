@@ -9,12 +9,16 @@ const img = new Image();
 const coin = document.createElement("img");
 const spreadsheetId = "1kAkZoWDwcZsFV6EYyyc6pvnp77a4vcle";
 const gid = "0";
-const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json&gid=${gid}`;
+const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json`;
 const listContainer = document.querySelector(".list");
+const volume = document.querySelector(".volume");
+const title = document.querySelector(".title");
 let isDrawing = false;
 let currentIndex = 0;
 let lastTouchY = 0;
 let lastScrollTime = 0;
+let isVolume = false;
+let isMouseOverTitle = false;
 
 img.src = "../assets/ptic.png";
 
@@ -109,6 +113,22 @@ function updateSlide() {
   }
 }
 
+function mute() {
+  volume.innerHTML = "";
+  if (!isVolume) {
+    console.log("zvuk");
+    video.muted = false;
+    isVolume = true;
+    volume.innerHTML += `<i class="bi bi-volume-up-fill">`;
+  } else {
+    console.log("bezvuk");
+    volume.innerHTML += `<i class="bi bi-volume-mute-fill">`;
+
+    video.muted = true;
+    isVolume = false;
+  }
+}
+
 link.forEach((item) =>
   item.addEventListener("click", () => {
     currentIndex = parseInt(item.getAttribute("data-index"));
@@ -130,6 +150,7 @@ sliderContainer.addEventListener("touchstart", (event) => {
 });
 
 sliderContainer.addEventListener("touchmove", (event) => {
+  if (isMouseOverTitle) return;
   let touchY = event.touches[0].clientY;
   let deltaY = lastTouchY - touchY;
 
@@ -138,7 +159,16 @@ sliderContainer.addEventListener("touchmove", (event) => {
     lastTouchY = touchY;
   }
 });
+title.addEventListener("mouseenter", () => {
+  isMouseOverTitle = true;
+});
+
+title.addEventListener("mouseleave", () => {
+  isMouseOverTitle = false;
+});
 sliderContainer.addEventListener("wheel", (event) => {
+  if (isMouseOverTitle) return;
+
   if (
     Math.abs(event.deltaY) > Math.abs(event.deltaX) &&
     Math.abs(event.deltaY) > 50
