@@ -124,7 +124,7 @@
   display: flex;
   color: white;
   width: 70%;
-  justify-content: space-between;
+  justify-content: end;
   height: 100%;
 }
 .for-text {
@@ -294,6 +294,23 @@
   left: 20px;
   top: 1px;
   z-index: 10;
+}
+.but {
+  width: 20%;
+  background: red;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: 0;
+  height: 50px;
+  border-radius: 10px;
+
+  &:active {
+    transform: translateY(-2px);
+  }
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .hidden {
