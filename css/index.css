@@ -97,6 +97,7 @@
   display: flex;
   background: rgb(234, 80, 80);
   justify-content: center;
+  cursor: pointer;
 
   &:hover {
     color: red;
@@ -207,9 +208,10 @@
 .coin {
   position: fixed;
   width: 60px;
-  height: 60px;
+  height: 67px;
   pointer-events: none;
   transform: translate(-50%, -50%);
+  background: url("../assets/coin.png") top/cover no-repeat;
   z-index: 1000;
 }
 .maps-container {
@@ -311,6 +313,16 @@
   &:hover {
     transform: translateY(-2px);
   }
+}
+.green {
+  display: flex;
+}
+.search {
+  margin-top: 10px;
+  height: 565px;
+  overflow-y: scroll;
+  scrollbar-width: 100px;
+  scrollbar-width: none;
 }
 
 .hidden {
