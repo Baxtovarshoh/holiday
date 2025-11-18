@@ -50,6 +50,7 @@ canvas.addEventListener("mousemove", (e) => {
   ctx.fill();
 });
 
+
 function updateSlide() {
   sliderContainer.style.transform = `translateY(${
     -currentIndex * slideHeight
@@ -57,6 +58,7 @@ function updateSlide() {
   link.forEach((item, index) =>
     item.classList.toggle("active", index === currentIndex)
   );
+  console.log(currentIndex);
 
   if (currentIndex === 0 || currentIndex === 2) video.pause();
   else if (currentIndex === 1) video.play();
