@@ -23,7 +23,7 @@ let lastScrollTime = 0;
 let isVolume = false;
 let isMouseOverTitle = false;
 
-img.src = "../assets/ptic.png";
+img.src = "/assets/ptic.png";
 img.onload = () => {
   canvas.width = img.width;
   canvas.height = img.height;
