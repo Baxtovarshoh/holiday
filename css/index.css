@@ -201,12 +201,11 @@
   width: 100%;
   height: 93%;
   background: url("../assets/stic.png") top/cover no-repeat;
-
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .coin {
-  position: fixed;
+  position: absolute;
   width: 60px;
   height: 67px;
   pointer-events: none;

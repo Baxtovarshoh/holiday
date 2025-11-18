@@ -15,6 +15,7 @@ const input = document.querySelector(".input");
 const volume = document.querySelector(".volume");
 const title = document.querySelector(".title");
 const coin = document.querySelector(".coin");
+const schrt = document.querySelector(".schrt");
 
 let currentIndex = 0;
 let isDrawing = false;
@@ -39,8 +40,8 @@ canvas.addEventListener("mousemove", (e) => {
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  coin.style.left = `${e.clientX}px`;
-  coin.style.top = `${e.clientY}px`;
+  coin.style.left = `${x}px`;
+  coin.style.top = `${y}px`;
 
   if (!isDrawing) return;
 
@@ -62,6 +63,8 @@ function updateSlide() {
 
   if (currentIndex === 0 || currentIndex === 2) video.pause();
   else if (currentIndex === 1) video.play();
+
+  schrt.appendChild(coin)
 }
 
 link.forEach((item) =>
